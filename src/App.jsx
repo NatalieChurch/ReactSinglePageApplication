@@ -6,13 +6,14 @@ import './App.css'
 function App() {
   const [cats, setCats] = useState([]);
   const [selectedCat, setSelectedCat] = useState(null);
+  console.log(selectedCat)
 
   useEffect(()=>{
     const getCats = async () => {
       const res = await fetch("https://catfact.ninja/breeds")
       const data = await res.json()
       console.log(data)
-      setCats(data)
+      setCats(data.data)
     }
     getCats();
   }, [])

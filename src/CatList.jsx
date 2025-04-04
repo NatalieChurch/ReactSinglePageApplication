@@ -1,4 +1,5 @@
 function CatList({cats, setCats, selectedCat, setSelectedCat}){
+    console.log(cats)
     return(
         <>
         {

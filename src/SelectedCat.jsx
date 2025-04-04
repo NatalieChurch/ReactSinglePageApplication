@@ -1,9 +1,9 @@
-function SelectCat ({cat, setSelectedCat}){
+function SelectCat ({selectedCat, setSelectedCat}){
+    console.log(selectedCat)
     return(
         <>
-            <img src={cat.image} style={{height:"400px"}}/>
-            <p>{cat.name}</p>
-            <p>{cat.breed}</p>
+            <p>{selectedCat.breed}</p>
+            <p>{selectedCat.coat}</p>
             <button onClick={()=>setSelectedCat(null)}>Go Back</button>
         </>
     )
